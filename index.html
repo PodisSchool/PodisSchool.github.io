@@ -52,7 +52,18 @@
                          <li><a href="#top" class="smoothScroll">На главную</a></li>
                          <li><a href="#feature" class="smoothScroll">Преимущества</a></li>
                          <li><a href="#footer" class="smoothScroll">Контакты</a></li>
-			 <li><a href="Api/Programa.rar">Программа</a></li>
+			 <!-- <li><a href="Api/Programa.rar">Программа</a></li> -->
+			 <button id="downloadButton">Программа</button>
+			 <script>
+			 document.getElementById("downloadButton").addEventListener("click", function() {
+				 var archiveUrl = "/Api/Programa.rar";
+				 var a = document.createElement("a");
+				 a.href = archiveUrl;
+				 a.download = "Programa.rar";
+				 document.body.appendChild(a);
+				 a.click();
+			 });
+			 </script>
                     </ul>
                </div>
 
